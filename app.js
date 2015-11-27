@@ -6,6 +6,7 @@ var favicon = require('static-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cacheDaemon=require('./logic/daemon/cacheloader')
 
 var app = express();
 var http = require('http').Server(app);
@@ -60,6 +61,7 @@ app.use(function (err, req, res, next) {
     next();
 });
 
+cacheDaemon.runDaemon();
 sockets.runSocketServer(http);
 
 module.exports = http;

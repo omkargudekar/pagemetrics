@@ -36,7 +36,7 @@ cpu_free=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |  awk
 echo "{"
 
 	echo "\"general_info\":"
-	echo [{\"OS\":\"$os\",\"Hostname\": \"$host\",\"Uptime\":\" $uptime_seconds\",\"Server Time\":\"$server_time\" \}] 
+	echo {\"OS\":\"$os\",\"Hostname\": \"$host\",\"Uptime\":\" $uptime_seconds\",\"Server Time\":\"$server_time\" \}
 
 	echo ","
 
@@ -70,7 +70,7 @@ echo "{"
 
 	echo ","
 
-	echo "\"cpu_hevay_processes\":"
+	echo "\"cpu_heavy_processes\":"
 	echo $cpu_heavy_processes
 
 	echo ","

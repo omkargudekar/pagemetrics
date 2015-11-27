@@ -1,5 +1,7 @@
 var socketio = require('socket.io');
 
+var cacheDriver = require('./cachedriver');
+
 module.exports = {
 
     runSocketServer: function (http) {
@@ -11,17 +13,20 @@ module.exports = {
             console.log("Client connected: " + socket.id);
 
             socket.on('disconnect', function () {
-                console.log("Client disconnected:");
+                console.log("Client disconnected: "+ socket.id);
 
             });
 
             socket.on('getPerformanceDetails', function (request) {
-                //webPageTest(request, function (data) {
-                //    socket.emit('performanceDetails', data)
-                //});
-                console.log(request)
-                socket.emit('performanceDetails', 'hello')
 
+                setInterval(function () {
+
+                    cacheDriver.getCachedData(function(data){
+                        socket.emit('performanceDetails',data )
+
+                    })
+
+                }, 1000)
 
             });
 
