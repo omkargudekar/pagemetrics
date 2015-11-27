@@ -23,6 +23,7 @@
 
         socket.on('performanceDetails', function (data) {
 
+            console.log('Data Received',data)
             document.getElementById('performanceData').innerHTML = JSON.stringify(data,null, "\t");
 
 
