@@ -31,11 +31,16 @@ io_stats=`sh io_stats.sh`
 load_avg=`sh load_avg.sh`
 netstat=`sh netstat.sh`
 
+cpu_free=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |  awk '{print 100 - $1"%"}')
 
 echo "{"
 
 	echo "\"general_info\":"
 	echo [{\"OS\":\"$os\",\"Hostname\": \"$host\",\"Uptime\":\" $uptime_seconds\",\"Server Time\":\"$server_time\" \}] 
+
+	echo ","
+
+	echo "\"cpu_free\":" \"$cpu_free\"
 
 	echo ","
 
@@ -91,11 +96,11 @@ echo "{"
 	echo $common_apps
 	echo ","
 
-	echo "\"iso stats\":"
+	echo "\"io_stats\":"
 	echo $io_stats
 	echo ","
 
-	echo "\"load\":"
+	echo "\"load_avg\":"
 	echo $load_avg
 	echo ","
 
