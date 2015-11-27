@@ -1,1 +1,1 @@
-nohup wrapper.sh &
+nohup sh wrapper.sh &
