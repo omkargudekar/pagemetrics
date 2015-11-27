@@ -36,7 +36,7 @@ cpu_free=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |  awk
 echo "{"
 
 	echo "\"general_info\":"
-	echo {\"OS\":\"$os\",\"Hostname\": \"$host\",\"Uptime\":\" $uptime_seconds\",\"Server Time\":\"$server_time\" \}
+	echo {\"OS\":\"$os\",\"Hostname\": \"$host\",\"Uptime\":\" $uptime_seconds\",\"server_time\":\"$server_time\" \}
 
 	echo ","
 
@@ -45,7 +45,7 @@ echo "{"
 	echo ","
 
 
-	echo "\"ip addr\":"
+	echo "\"ip_address\":"
 	echo $ifconfigCmd \
 	| $grepCmd -B1 "inet addr" \
 	| $awkCmd '{ if ( $1 == "inet" ) { print $2 } else if ( $2 == "Link" ) { printf "%s:" ,$1 } }' \
