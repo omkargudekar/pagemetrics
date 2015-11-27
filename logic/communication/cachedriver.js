@@ -19,7 +19,7 @@ module.exports = {
             redisClient.get('performance', function (error, reply) {
 
 
-                console.log(reply)
+               // console.log(reply)
 
                 callback(reply)
 
@@ -40,7 +40,7 @@ module.exports = {
 
         try {
             redisClient.set('performance', data, function (err, reply) {
-                console.log(reply);
+               // console.log(reply);
             });
         }
         catch (e) {

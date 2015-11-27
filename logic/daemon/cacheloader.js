@@ -13,7 +13,7 @@ module.exports = {
                 if (err) {
                     return console.log(err);
                 }
-                console.log(data);
+                //console.log(data);
                 cacheDriver.updateCache(data);
             });
 
