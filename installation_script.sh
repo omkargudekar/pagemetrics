@@ -50,6 +50,7 @@ then
   echo "npm is already installed..."
 fi
 wait
+
 echo "Checking for redis-server installation..."
 if [ $(dpkg-query -W -f='${Status}' redis-server 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
@@ -61,19 +62,21 @@ fi
 wait
 
 
-echo "Downloading code from repository..."
-git clone https://github.com/omkargudekar/pagemetrics.git
-wait
 
 echo "Cleaning previous processes...if any..."
 pkill -f wrapper_dashboard_998899.sh
 wait
+
+echo "Cleaning previous installations..if any..."
 rm -rf pagemetrics
 wait
 
 
+echo "Downloading code from repository..."
+git clone https://github.com/omkargudekar/pagemetrics.git
+wait
 
-echo "Cleaning previous installations..if any..."
+
 cd pagemetrics
 npm install
 wait
