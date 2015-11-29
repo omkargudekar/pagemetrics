@@ -65,10 +65,9 @@ nohup redis-server >redis.log &
 
 cd serverninja-unix-monitoring
 
-
 echo "Running server-ninja agent..."
 cd scripts
-nohup sh runagent.sh > agentlog &
+nohup sh runagent.sh &
 echo $$ > server-ninja_agent_pid
 
 cd ..
