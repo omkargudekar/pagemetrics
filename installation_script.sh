@@ -88,7 +88,7 @@ echo "Running redis server..."
 
 redisReply= `redis-cli PING`
 
-if [ $redisReply -ne "PONG" ];
+if [ "$redisReply" != "PONG" ];
 then
   echo "Redis server is down. Starting redis-server"
   nohup redis-server >redis.log &
@@ -100,9 +100,9 @@ fi
 
 
 echo "Installing server-ninja dashboard setup..."
-npm install --win
+npm install --silent
 wait
-npm install nodemon -g --win | nohup nodemon --port $nodeport > dashboard.log &
+npm install nodemon -g --silent | nohup nodemon --port $nodeport > dashboard.log &
 wait
 
 
@@ -115,22 +115,22 @@ wait
 
 
 
-publicIP= `wget http://ipinfo.io/ip -qO -`
-dashboardURL=publicIP':'$nodeport
-
-if curl --output /dev/null --silent --head --fail "$dashboardURL"
-then
-    echo "Dashboard is up and running on "+ $dashboardURL
-else
-    setterm -term linux -back black -fore red -clear
-
-    echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
-fi
-wait
-
-setterm -reset
-
-echo "Bye Bye.. Installation complete...nJoy :) "
+#publicIP= `wget http://ipinfo.io/ip -qO -`
+#dashboardURL=publicIP':'$nodeport
+#
+#if curl --output /dev/null --silent --head --fail "$dashboardURL"
+#then
+#    echo "Dashboard is up and running on "+ $dashboardURL
+#else
+#    setterm -term linux -back black -fore red -clear
+#
+#    echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
+#fi
+#wait
+#
+#setterm -reset
+#
+#echo "Bye Bye.. Installation complete...nJoy :) "
 
 
 
