@@ -8,9 +8,12 @@ echo "Installation started....\n"
 wait
 sleep 3
 
-read -p "Please select the port for node-server: " nodeport
-wait
-read -p "Please select the port for redi-server: " redisport
+echo -n "Please select the port for node-server: "
+read -p nodeport
+
+
+echo -n "Please select the port for redis-server: "
+read -p redisport
 wait
 
 
