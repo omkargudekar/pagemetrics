@@ -68,7 +68,7 @@ pkill -f wrapper_dashboard_998899.sh
 wait
 
 echo "Cleaning previous installations..if any..."
-rm -rf pagemetrics
+rm -rf serverninja-unix-monitoring
 wait
 
 
@@ -84,11 +84,13 @@ echo "Running server-ninja agent..."
 nohup sh scripts/runagent.sh &
 echo $$ > server-ninja_agent_pid
 
+
+
 echo "Running redis server..."
+redisReply= $( redis-cli PING )
+wait
 
-redisReply= `redis-cli PING`
-
-if [ "$redisReply" != "PONG" ];
+if [ "$redisReply" = "PONG" ];
 then
   echo "Redis server is down. Starting redis-server"
   nohup redis-server >redis.log &
