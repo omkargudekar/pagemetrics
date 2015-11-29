@@ -9,7 +9,9 @@ wait
 sleep 3
 
 read -p "Please select the port for node-server: " nodeport
+wait
 read -p "Please select the port for redi-server: " redisport
+wait
 
 
 
