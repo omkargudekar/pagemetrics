@@ -41,7 +41,7 @@ then
   echo "nodejs is already installed..."
 fi
 
-sudo ln -s `which nodejs` /usr/bin/node
+ln -s `which nodejs` /usr/bin/node
 
 echo "Checking for npm installation..."
 
