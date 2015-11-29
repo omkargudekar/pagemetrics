@@ -48,7 +48,7 @@ echo "Checking for npm installation..."
 if [ $(dpkg-query -W -f='${Status}' nodejs npm 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
   echo "No npm found. Setting up npm."
-  apt-get --force-yes --yes install nodejs npm &
+  apt-get --force-yes --yes install npm &
   wait
   else
   echo "npm is already installed..."
