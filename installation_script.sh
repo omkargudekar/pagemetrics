@@ -103,7 +103,7 @@ wait
 
 
 echo "Starting -server-ninja dashboard.."
-nohup nodemon  5145 > dashboard.log &
+nohup nodemon 5145 > dashboard.log &
 echo $$ > nodeserver_pid
 echo "dashboard running...."
 
