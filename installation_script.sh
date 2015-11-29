@@ -83,8 +83,11 @@ cd serverninja-unix-monitoring
 
 
 echo "Running server-ninja agent..."
-nohup sh scripts/runagent.sh &
+cd scripts
+nohup sh runagent.sh &
 echo $$ > server-ninja_agent_pid
+
+cd ..
 
 
 
