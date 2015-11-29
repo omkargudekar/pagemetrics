@@ -105,28 +105,26 @@ wait
 
 
 
-echo "Starting -server-ninja dashboard.."
 nohup nodemon > dashboard.log &
 echo $$ > nodeserver_pid
-echo "dashboard running...."
 
 
 
 
 
-publicIP= `wget http://ipinfo.io/ip -qO -`
-dashboardURL=$publicIP':5145'
-
-if curl --output /dev/null --silent --head --fail "$dashboardURL"
-then
-    echo "Dashboard is up and running on "+ $dashboardURL
-else
-    setterm -term linux -back black -fore red -clear
-
-    echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
-    setterm -reset
-fi
-
+#publicIP= `wget http://ipinfo.io/ip -qO -`
+#dashboardURL=$publicIP':5145'
+#
+#if curl --output /dev/null --silent --head --fail "$dashboardURL"
+#then
+#    echo "Dashboard is up and running on "+ $dashboardURL
+#else
+#    setterm -term linux -back black -fore red -clear
+#
+#    echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
+#    setterm -reset
+#fi
+#
 
 echo "Bye Bye.. Installation complete...nJoy :) "
 
