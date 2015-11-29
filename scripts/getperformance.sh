@@ -31,7 +31,10 @@ io_stats=`sh io_stats.sh`
 load_avg=`sh load_avg.sh`
 netstat=`sh netstat.sh`
 
-cpu_free=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |  awk '{print 100 - $1"%"}')
+
+var cpu_free=  `expr $RANDOM % 100`
+
+#cpu_free=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |  awk '{print 100 - $1"%"}')
 
 echo "{"
 
