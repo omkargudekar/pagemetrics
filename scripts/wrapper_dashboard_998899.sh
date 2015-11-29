@@ -4,5 +4,5 @@ do
 	echo `sh getperformance.sh` > performance.log
 
 
-	sleep 10
+	sleep 2
 done
