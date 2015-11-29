@@ -84,10 +84,10 @@ npm install nodemon -g
 wait
 
 
-echo "Running pagemetrics agent..."
+echo "Running server-ninja agent..."
 cd scripts
 nohup sh runagent.sh &
-echo $$ > pagemetrics_agent_pid
+echo $$ > server-ninja_agent_pid
 
 
 echo "Checking redis server..."
