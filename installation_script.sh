@@ -8,15 +8,6 @@ echo "Installation started....\n"
 wait
 sleep 3
 
-echo -n "Please select the port for node-server: "
-read nodeport
-
-
-echo -n "Please select the port for redis-server: "
-read -p redisport
-wait
-
-
 
 echo "Checking for git installation..."
 wait
@@ -74,30 +65,40 @@ wait
 npm install nodemon -g
 wait
 
-apt-get install redis-server
-wait
 
 pkill -f wrapper_dashboard_998899.sh
-
+wait
 rm -rf pagemetrics
 wait
 
-nohup redis-server --port $redisport >redis.log &
-echo $$ > redit_agent_pid
-nohup nodemon --port $nodeport > dashboard.log &
-echo $$ > nodeserver_pid
+
+
 cd scripts
 nohup sh runagent.sh &
 echo $$ > pagemetrics_agent_pid
 
 
-dashboardURL="http://www.google.com"
+echo -n "Please select the port for node-server: "
+read -p nodeport
+nohup nodemon --port $nodeport > dashboard.log &
+echo $$ > nodeserver_pid
+
+echo -n "Please select the port for redis-server: "
+read -p redisport
+wait
+nohup redis-server --port $redisport >redis.log &
+echo $$ > redit_agent_pid
+
+
+
+publicIP= `wget http://ipinfo.io/ip -qO -`
+dashboardURL=publicIP':'$nodeport
 
 if curl --output /dev/null --silent --head --fail "$dashboardURL"
 then
-    echo "This URL Exist"
+    echo "Dashboard is up and running on "+ $dashboardURL
 else
-    echo "This URL Not Exist"
+    echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
 fi
 wait
 
