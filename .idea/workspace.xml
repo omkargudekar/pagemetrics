@@ -21,20 +21,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="installation_script.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="installation_script.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/installation_script.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.92">
-              <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.3034826">
+              <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ram_heavy_processes.sh" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ram_heavy_processes.sh" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/ram_heavy_processes.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.11942675">
+            <state vertical-scroll-proportion="0.0">
               <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
               <folding />
             </state>
@@ -69,8 +69,8 @@
         <option value="$PROJECT_DIR$/scripts/runagent.sh" />
         <option value="$PROJECT_DIR$/logic/communication/sockets.js" />
         <option value="$PROJECT_DIR$/credit.txt" />
-        <option value="$PROJECT_DIR$/installation_script.sh" />
         <option value="$PROJECT_DIR$/scripts/ram_heavy_processes.sh" />
+        <option value="$PROJECT_DIR$/installation_script.sh" />
       </list>
     </option>
   </component>
@@ -464,18 +464,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/installation_script.sh">
+    <entry file="file://$PROJECT_DIR$/scripts/ram_heavy_processes.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.92">
-          <caret line="109" column="0" selection-start-line="109" selection-start-column="0" selection-end-line="109" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ram_heavy_processes.sh">
+    <entry file="file://$PROJECT_DIR$/installation_script.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11942675">
-          <caret line="5" column="48" selection-start-line="5" selection-start-column="48" selection-end-line="5" selection-end-column="48" />
+        <state vertical-scroll-proportion="0.3034826">
+          <caret line="96" column="21" selection-start-line="96" selection-start-column="21" selection-end-line="96" selection-end-column="21" />
           <folding />
         </state>
       </provider>

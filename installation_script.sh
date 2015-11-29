@@ -96,7 +96,7 @@ nohup redis-server >redis.log &
 echo "Installing server-ninja dashboard setup..."
 npm install --silent &
 wait
-npm install nodemon -g --silent  &
+npm install nodemon -g --silent &
 wait
 
 
@@ -112,7 +112,7 @@ echo "dashboard running...."
 
 
 publicIP= `wget http://ipinfo.io/ip -qO -`
-dashboardURL=$publicIP':5200'
+dashboardURL=$publicIP':5145'
 
 if curl --output /dev/null --silent --head --fail "$dashboardURL"
 then
