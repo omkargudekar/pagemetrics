@@ -1,6 +1,5 @@
 #!/bin/sh
 setterm -term linux -back black -fore green -clear
-$nodeport=52300
 
 curl https://raw.githubusercontent.com/omkargudekar/serverninja-unix-monitoring/master/credit.txt | cat &
 wait
@@ -114,29 +113,29 @@ wait
 
 
 echo "Starting -server-ninja dashboard.."
-nohup nodemon --port $nodeport > dashboard.log &
+nohup nodemon 5200 > dashboard.log &
 echo $$ > nodeserver_pid
 
 
 
 
 
-#publicIP= `wget http://ipinfo.io/ip -qO -`
-#dashboardURL=publicIP':'$nodeport
-#
-#if curl --output /dev/null --silent --head --fail "$dashboardURL"
-#then
-#    echo "Dashboard is up and running on "+ $dashboardURL
-#else
-#    setterm -term linux -back black -fore red -clear
-#
-#    echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
-#fi
-#wait
-#
-#setterm -reset
-#
-#echo "Bye Bye.. Installation complete...nJoy :) "
+publicIP= `wget http://ipinfo.io/ip -qO -`
+dashboardURL=publicIP':5200'
+
+if curl --output /dev/null --silent --head --fail "$dashboardURL"
+then
+    echo "Dashboard is up and running on "+ $dashboardURL
+else
+    setterm -term linux -back black -fore red -clear
+
+    echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
+fi
+wait
+
+setterm -reset
+
+echo "Bye Bye.. Installation complete...nJoy :) "
 
 
 
