@@ -98,9 +98,13 @@ if curl --output /dev/null --silent --head --fail "$dashboardURL"
 then
     echo "Dashboard is up and running on "+ $dashboardURL
 else
+    setterm -term linux -back black -fore red -clear
+
     echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
 fi
 wait
+
+setterm -reset
 
 echo "Bye Bye.. Installation complete...nJoy :) "
 
