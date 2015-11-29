@@ -77,6 +77,8 @@ wait
 apt-get install redis-server
 wait
 
+pkill -f wrapper_dashboard_998899.sh
+
 rm -rf pagemetrics
 wait
 
