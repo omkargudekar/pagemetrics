@@ -3,6 +3,6 @@ var debug = require('debug')('my-application');
 var http = require('../app');
 
 
-var server = http.listen(3000, function() {
+var server = http.listen(51245, function() {
   console.log('Express server listening on port ' + server.address().port);
 });

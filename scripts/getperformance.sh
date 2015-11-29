@@ -55,7 +55,7 @@ echo "{"
 	echo ","
 
 
-	echo "\"diskpace\":"
+	echo "\"diskspace\":"
 	echo $diskspace
 
 	echo ","
