@@ -9,7 +9,7 @@ wait
 sleep 3
 
 echo -n "Please select the port for node-server: "
-read -p nodeport
+read nodeport
 
 
 echo -n "Please select the port for redis-server: "
@@ -77,6 +77,8 @@ wait
 apt-get install redis-server
 wait
 
+rm -rf pagemetrics
+wait
 
 nohup redis-server --port $redisport >redis.log &
 echo $$ > redit_agent_pid
