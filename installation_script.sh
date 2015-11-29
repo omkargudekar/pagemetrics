@@ -89,24 +89,14 @@ echo $$ > server-ninja_agent_pid
 
 
 echo "Running redis server..."
-redisReply= $( redis-cli PING )
-
-
-if [ "$redisReply" = "PONG" ];
-then
-  echo "Redis server is down. Starting redis-server"
-  nohup redis-server >redis.log &
-  echo $$ > redit_agent_pid
- else
-  echo "Redis-Server is already running..."
-fi
+nohup redis-server >redis.log &
 
 
 
 echo "Installing server-ninja dashboard setup..."
-npm install --silent &
+npm install &
 wait
-npm install nodemon -g --silent &
+npm install nodemon -g  &
 wait
 
 
@@ -131,10 +121,10 @@ else
     setterm -term linux -back black -fore red -clear
 
     echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
+    setterm -reset
 fi
 wait
 
-setterm -reset
 
 echo "Bye Bye.. Installation complete...nJoy :) "
 
