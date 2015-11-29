@@ -1,0 +1,533 @@
+{
+//  "general_info": {
+//    "OS": "Ubuntu 14.04.3 LTS 3.13.0-48-generic",
+//    "Hostname": "ip-172-31-35-13",
+//    "Uptime": " 878813.84",
+//    "server_time": "Fri Nov 27 03:32:56 UTC 2015"
+//  },
+//  "cpu_free": "0.1",
+//  "ip_address": {
+//    "interface": "external",
+//    "ip": "52.25.29.204"
+//  },
+//  "diskpace": [
+//    {
+//      "file_system": "/dev/xvda1",
+//      "size": "7.8G",
+//      "used": "2.8G",
+//      "avail": "4.6G",
+//      "used%": "38%",
+//      "mounted": "/"
+//    },
+//    {
+//      "file_system": "none",
+//      "size": "4.0K",
+//      "used": "0",
+//      "avail": "4.0K",
+//      "used%": "0%",
+//      "mounted": "/sys/fs/cgroup"
+//    },
+//    {
+//      "file_system": "udev",
+//      "size": "492M",
+//      "used": "12K",
+//      "avail": "492M",
+//      "used%": "1%",
+//      "mounted": "/dev"
+//    },
+//    {
+//      "file_system": "tmpfs",
+//      "size": "100M",
+//      "used": "388K",
+//      "avail": "99M",
+//      "used%": "1%",
+//      "mounted": "/run"
+//    },
+//    {
+//      "file_system": "none",
+//      "size": "5.0M",
+//      "used": "0",
+//      "avail": "5.0M",
+//      "used%": "0%",
+//      "mounted": "/run/lock"
+//    },
+//    {
+//      "file_system": "none",
+//      "size": "497M",
+//      "used": "0",
+//      "avail": "497M",
+//      "used%": "0%",
+//      "mounted": "/run/shm"
+//    },
+//    {
+//      "file_system": "none",
+//      "size": "100M",
+//      "used": "0",
+//      "avail": "100M",
+//      "used%": "0%",
+//      "mounted": "/run/user"
+//    }
+//  ],
+//  "memory": {
+//    "total": 992.473,
+//    "used": 640.32,
+//    "free": 352.152
+//  },
+  "memory_details": {
+    "MemTotal": " 1016292 kB",
+    "MemFree": " 89484 kB",
+    "Buffers": " 73300 kB",
+    "Cached": " 197556 kB",
+    "SwapCached": " 0 kB",
+    "Active": " 697164 kB",
+    "Inactive": " 118548 kB",
+    "Active(anon)": " 544944 kB",
+    "Inactive(anon)": " 1556 kB",
+    "Active(file)": " 152220 kB",
+    "Inactive(file)": " 116992 kB",
+    "Unevictable": " 0 kB",
+    "Mlocked": " 0 kB",
+    "SwapTotal": " 0 kB",
+    "SwapFree": " 0 kB",
+    "Dirty": " 0 kB",
+    "Writeback": " 0 kB",
+    "AnonPages": " 544872 kB",
+    "Mapped": " 16496 kB",
+    "Shmem": " 1644 kB",
+    "Slab": " 84508 kB",
+    "SReclaimable": " 70300 kB",
+    "SUnreclaim": " 14208 kB",
+    "KernelStack": " 1840 kB",
+    "PageTables": " 8420 kB",
+    "NFS_Unstable": " 0 kB",
+    "Bounce": " 0 kB",
+    "WritebackTmp": " 0 kB",
+    "CommitLimit": " 508144 kB",
+    "Committed_AS": " 1149564 kB",
+    "VmallocTotal": " 34359738367 kB",
+    "VmallocUsed": " 4472 kB",
+    "VmallocChunk": " 34359726700 kB",
+    "HardwareCorrupted": " 0 kB",
+    "AnonHugePages": " 335872 kB",
+    "HugePages_Total": " 0",
+    "HugePages_Free": " 0",
+    "HugePages_Rsvd": " 0",
+    "HugePages_Surp": " 0",
+    "Hugepagesize": " 2048 kB",
+    "DirectMap4k": " 32768 kB",
+    "DirectMap2M": " 1146880 kB"
+  },
+//  "cpu_hevay_processes": [
+//    {
+//      "pid": 25098,
+//      "user": "ubuntu",
+//      "cpu%": 0.2,
+//      "rss": 37236,
+//      "vsz": 740044,
+//      "cmd": "mongod"
+//    },
+//    {
+//      "pid": 8230,
+//      "user": "ubuntu",
+//      "cpu%": 0.1,
+//      "rss": 1880,
+//      "vsz": 105632,
+//      "cmd": "sshd"
+//    },
+//    {
+//      "pid": 25466,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 77828,
+//      "vsz": 991868,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 24914,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 73128,
+//      "vsz": 931016,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 27304,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 72080,
+//      "vsz": 1000608,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 22405,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 66408,
+//      "vsz": 714324,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 19536,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 54160,
+//      "vsz": 966328,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 26562,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 54120,
+//      "vsz": 966328,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 23959,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 53440,
+//      "vsz": 966328,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 25336,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 37756,
+//      "vsz": 965304,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 22396,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 36288,
+//      "vsz": 965304,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 8675,
+//      "user": "syslog",
+//      "cpu%": 0.0,
+//      "rss": 13192,
+//      "vsz": 260268,
+//      "cmd": "rsyslogd"
+//    },
+//    {
+//      "pid": 31665,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 4232,
+//      "vsz": 105632,
+//      "cmd": "sshd"
+//    },
+//    {
+//      "pid": 8176,
+//      "user": "root",
+//      "cpu%": 0.0,
+//      "rss": 4228,
+//      "vsz": 105632,
+//      "cmd": "sshd"
+//    }
+//  ],
+//  "ram_heavy_processes": [
+//    {
+//      "pid": 25466,
+//      "user": "root",
+//      "mem%": 7.6,
+//      "rss": 77828,
+//      "vsz": 991868,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 24914,
+//      "user": "root",
+//      "mem%": 7.1,
+//      "rss": 73128,
+//      "vsz": 931016,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 27304,
+//      "user": "root",
+//      "mem%": 7.0,
+//      "rss": 72080,
+//      "vsz": 1000608,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 22405,
+//      "user": "root",
+//      "mem%": 6.5,
+//      "rss": 66408,
+//      "vsz": 714324,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 19536,
+//      "user": "root",
+//      "mem%": 5.3,
+//      "rss": 54160,
+//      "vsz": 966328,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 26562,
+//      "user": "root",
+//      "mem%": 5.3,
+//      "rss": 54120,
+//      "vsz": 966328,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 23959,
+//      "user": "root",
+//      "mem%": 5.2,
+//      "rss": 53440,
+//      "vsz": 966328,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 25336,
+//      "user": "root",
+//      "mem%": 3.7,
+//      "rss": 37756,
+//      "vsz": 965304,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 25098,
+//      "user": "ubuntu",
+//      "mem%": 3.6,
+//      "rss": 37236,
+//      "vsz": 740044,
+//      "cmd": "mongod"
+//    },
+//    {
+//      "pid": 22396,
+//      "user": "root",
+//      "mem%": 3.5,
+//      "rss": 36288,
+//      "vsz": 965304,
+//      "cmd": "node"
+//    },
+//    {
+//      "pid": 8675,
+//      "user": "syslog",
+//      "mem%": 1.2,
+//      "rss": 13192,
+//      "vsz": 260268,
+//      "cmd": "rsyslogd"
+//    },
+//    {
+//      "pid": 31665,
+//      "user": "root",
+//      "mem%": 0.4,
+//      "rss": 4232,
+//      "vsz": 105632,
+//      "cmd": "sshd"
+//    },
+//    {
+//      "pid": 8176,
+//      "user": "root",
+//      "mem%": 0.4,
+//      "rss": 4228,
+//      "vsz": 105632,
+//      "cmd": "sshd"
+//    },
+//    {
+//      "pid": 8311,
+//      "user": "root",
+//      "mem%": 0.4,
+//      "rss": 4220,
+//      "vsz": 105632,
+//      "cmd": "sshd"
+//    }
+//  ],
+  "cpu_info": {
+    "Architecture": " x86_64",
+    "CPU op-mode(s)": " 32-bit, 64-bit",
+    "Byte Order": " Little Endian",
+    "CPU(s)": " 1",
+    "On-line CPU(s) list": " 0",
+    "Thread(s) per core": " 1",
+    "Core(s) per socket": " 1",
+    "Socket(s)": " 1",
+    "NUMA node(s)": " 1",
+    "Vendor ID": " GenuineIntel",
+    "CPU family": " 6",
+    "Model": " 62",
+    "Stepping": " 4",
+    "CPU MHz": " 2500.082",
+    "BogoMIPS": " 5000.16",
+    "Hypervisor vendor": " Xen",
+    "Virtualization type": " full",
+    "L1d cache": " 32K",
+    "L1i cache": " 32K",
+    "L2 cache": " 256K",
+    "L3 cache": " 25600K",
+    "NUMA node0 CPU(s)": " 0"
+  },
+  "logins": [
+    {
+      "user": "ubuntu",
+      "ip": "c-71-202-63-137.",
+      "date": "Nov 27 03:24:23 +0000 2015"
+    }
+  ],
+  "bandwidth": [
+    {
+      "interface": "eth0:",
+      "tx": 382854617,
+      "rx": 146967826
+    },
+    {
+      "interface": "lo:",
+      "tx": 182306938,
+      "rx": 182306938
+    }
+  ],
+//  "common_apps": [
+//    {
+//      "binary": "php",
+//      "location": "",
+//      "installed": false
+//    },
+//    {
+//      "binary": "node",
+//      "location": " /usr/bin/node /usr/share/man/man1/node.1.gz",
+//      "installed": true
+//    },
+//    {
+//      "binary": "mysql",
+//      "location": "",
+//      "installed": false
+//    },
+//    {
+//      "binary": "mongo",
+//      "location": " /usr/bin/mongo /usr/include/mongo /usr/share/man/man1/mongo.1.gz",
+//      "installed": true
+//    },
+//    {
+//      "binary": "vim",
+//      "location": " /usr/bin/vim.basic /usr/bin/vim /usr/bin/vim.tiny /etc/vim /usr/share/vim /usr/share/man/man1/vim.1.gz",
+//      "installed": true
+//    },
+//    {
+//      "binary": "python",
+//      "location": " /usr/bin/python3.4 /usr/bin/python2.7 /usr/bin/python /usr/bin/python3.4m /etc/python3.4 /etc/python2.7 /etc/python /usr/lib/python3.4 /usr/lib/python2.7 /usr/local/lib/python3.4 /usr/local/lib/python2.7 /usr/share/python /usr/share/man/man1/python.1.gz",
+//      "installed": true
+//    },
+//    {
+//      "binary": "ruby",
+//      "location": "",
+//      "installed": false
+//    },
+//    {
+//      "binary": "java",
+//      "location": " /usr/share/java",
+//      "installed": true
+//    },
+//    {
+//      "binary": "apache2",
+//      "location": " /etc/apache2",
+//      "installed": true
+//    },
+//    {
+//      "binary": "nginx",
+//      "location": " /usr/sbin/nginx /etc/nginx /usr/share/nginx /usr/share/man/man1/nginx.1.gz",
+//      "installed": true
+//    },
+//    {
+//      "binary": "openssl",
+//      "location": " /usr/bin/openssl /usr/share/man/man1/openssl.1ssl.gz",
+//      "installed": true
+//    },
+//    {
+//      "binary": "vsftpd",
+//      "location": "",
+//      "installed": false
+//    },
+//    {
+//      "binary": "make",
+//      "location": " /usr/bin/make /usr/share/man/man1/make.1.gz",
+//      "installed": true
+//    }
+//  ],
+//  "io_stats": [
+//    {
+//      "device": "xvda",
+//      "reads": "102704",
+//      "writes": "180514",
+//      "in_progress": "0",
+//      "time_in_io": "168764"
+//    },
+//    {
+//      "device": "xvda1",
+//      "reads": "102241",
+//      "writes": "180413",
+//      "in_progress": "0",
+//      "time_in_io": "168592"
+//    }
+//  ],
+//  "load_avg": {
+//    "1_min_avg": 0,
+//    "5_min_avg": 1,
+//    "15_min_avg": 5
+//  },
+//  "netstat": [
+//    {
+//      "connections": 1,
+//      "address": "127.0.0.1:50561"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "127.0.0.1:50562"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "127.0.0.1:50563"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "127.0.0.1:50564"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "127.0.0.1:50565"
+//    },
+//    {
+//      "connections": 5,
+//      "address": "127.0.0.1:51232"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "71.202.63.137:56355"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "71.202.63.137:57915"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "71.202.63.137:58244"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "71.202.63.137:58871"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "71.202.63.137:60005"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "71.202.63.137:60035"
+//    },
+//    {
+//      "connections": 1,
+//      "address": "71.202.63.137:63334"
+//    }
+//  ]
+}

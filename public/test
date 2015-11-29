@@ -1,0 +1,170 @@
+var netchart = new Highcharts.Chart({
+        chart: {
+            renderTo: 'netstat',
+
+charts['netchart'] = netchart;
+
+
+
+
+
+<main id="sort">
+
+    <div class="row">
+        <div class="col s12 m12 l12 animated bounceInDown">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading"> System Information</div>
+                <div class="body">
+                    <div id="serverinfo" class="row">
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <span id="os"></span>
+                            <label for="os" class="active">Operating System</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <span id="host"></span>
+                            <label for="host" class="active">Host Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <span id="uptime"></span>
+                            <label for="uptime" class="active">Server Uptime</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <span id="servertime"></span>
+                            <label for="servertime" class="active">Server Timestamp</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <i class="material-icons prefix">account_circle</i>
+                            <span id="ipaddress"></span>
+                            <label for="ipaddress" class="active">IP Address</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s6 m6 l3 animated tada">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">CPU % Usage</div>
+                <div class="body">
+                    <div id="cpu"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col s6 m6 l3 hide-on-large-only animated bounceInRight ">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">Memory Usage</div>
+                <div class="body">
+                    <div class="memory"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m12 l6 hide-on-small-and-down animated bounceInLeft">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">Network Statistics</div>
+                <div class="body">
+                    <div id="netstat"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="col s12 m6 l3  hide-on-med-and-down animated bounceInRight ">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">Memory Usage</div>
+                <div class="body">
+                    <div id="memory"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m6 l6 wow pulse">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">Processes</div>
+                <div class="body">
+                    <div id="cpuHeavy"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l6 wow fadeInRight">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">CPU Processes</div>
+                <div class="body">
+                    <div id="cpupro">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m4 l4 wow fadeInLeft">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">Traffic</div>
+                <div class="body">
+                    <div id="traffic">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m4 l4 wow fadeInRight">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">IO Stats</div>
+                <div class="body">
+                    <div id="io">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m4 l4 animated pulse">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">CPU Info</div>
+                <div class="body row">
+                    <div id="cpuinfo">
+                        <table class="striped highlight">
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="row">
+        <div class="col s12 m6 l6 wow fadeInLeft">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">Common Apps</div>
+                <div class="body">
+                    <div id="commonapps">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m6 l6 animated fadeInRight">
+            <div class="card-panel blue-grey lighten-5">
+                <div class="heading">Diskspace</div>
+                <div class="body">
+                    <table id="diskspace" class="display" width="100%"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+</main>

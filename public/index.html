@@ -3,53 +3,80 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="external/css/materialize.min.css" media="screen,projection"/>
+    <link type="text/css" rel="stylesheet" href="external/css/animate.css" media="screen,projection"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-
-        var socket = io('http://pagemetrix.info');
-
-
-        function getData() {
-
-            document.getElementById('performanceData').innerHTML='<h2> Loading...</h2>'
-
-
-            socket.emit('getPerformanceDetails','');
-
-
-
-        }
-
-        socket.on('performanceDetails', function (data) {
-
-            console.log('Data Received',data)
-            document.getElementById('performanceData').innerHTML = JSON.stringify(data,null, "\t");
-
-
-        });
-
-
-
-    </script>
+    <link type="text/css" rel="stylesheet" href="css/base.css"/>
+    <title>Ninja Monitor</title>
 </head>
-<body style="">
+<body>
+    <header class="row center-align">
+                    <nav class="menu m12 col">
+                <div class="nav-wrapper">
+                  
+                  <a href="#" class="brand-logo">Server Ninja</a>
+                  
+                </div>
+              </nav>
+    
+    </header>
+        
+    <section>
+       
+        <div class="row">
+            <div class="info-wrapper center-align">
+                 <img src="http://singaporeninjutsu.com/wp-content/uploads/2014/11/ninja-icon.png">
+                <h2> Real-time server monitoring</h2>        
+                <p class="sub-text">A modern responsive dashboard to monitor your server resources in real-time with visualizations</p>
+                <a class="waves-effect waves-light btn-large large-button" href="dashboard.html"><i class="material-icons">play_arrow</i> Live demo</a>
+            </div>
+            
+             <div class="info-wrapper center-align">
+                    <h2>Requirements</h2>        
+                    <p>
+                        Follow the following steps:
+                        
+                    </p>
+                <ol>
+                            <li>Open port 9999 on your server to access the page</li>
+                                    <li>Run the following command</li>
+                        </ol>
+            </div>
 
-<h3>Performance Analysis (WebSockets)</h3>
-<br>
-<br>
+            <div class="info-wrapper center-align">
+                    <h2>How to?</h2>        
+                    <p>
+                        Follow the following steps:
+                        
+                    </p>
+                <ol>
+                            <li>Open port 9999 on your server to access the page</li>
+                                    <li>Run the following command</li>
+                        </ol>
+            </div>
+            
+            <div class="info-wrapper center-align">
+                    <h2>Team UI Ninjas</h2>        
+                    
+            </div>
+        </div>
+        
 
-<div>
-    <input type="button" value="Get Performance Details" onclick="getData()" style=" padding: 10px 15px; background: #4479BA; color: #FFF;">
-</div>
+    </section>
+    
+        
+    
+<footer>
+    Copyright @UI Ninjas
+</footer>
+<!--Import jQuery before materialize.js-->
+<script src="external/js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="external/js/materialize.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 
-<br>
-<br>
-<b>Performance Data</b>
-<div id="performanceData" style="border:solid 1px #000; height: 200px;overflow: auto"></div>
-</div>
-
-
-
+<script type="text/javascript" src="js/wm_landing.js"></script>
 </body>
 </html>

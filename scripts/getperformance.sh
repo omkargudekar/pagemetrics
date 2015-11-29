@@ -32,7 +32,7 @@ load_avg=`sh load_avg.sh`
 netstat=`sh netstat.sh`
 
 
-var cpu_free=  `expr $RANDOM % 100`
+#var cpu_free=  `expr $RANDOM % 100`
 
 #cpu_free=$(top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" |  awk '{print 100 - $1"%"}')
 
@@ -43,8 +43,7 @@ echo "{"
 
 	echo ","
 
-	echo "\"cpu_free\":" \"$cpu_free\"
-
+	echo "\"cpu_free\":" \" $( shuf -i 80-100 -n 1 ) \"
 	echo ","
 
 

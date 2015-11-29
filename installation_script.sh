@@ -41,6 +41,8 @@ then
   echo "nodejs is already installed..."
 fi
 
+sudo ln -s `which nodejs` /usr/bin/node
+
 echo "Checking for npm installation..."
 
 if [ $(dpkg-query -W -f='${Status}' nodejs npm 2>/dev/null | grep -c "ok installed") -eq 0 ];
