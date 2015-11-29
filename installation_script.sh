@@ -77,7 +77,7 @@ git clone https://github.com/omkargudekar/serverninja-unix-monitoring.git
 wait
 
 
-cd pagemetrics
+cd serverninja-unix-monitoring
 npm install
 wait
 npm install nodemon -g
