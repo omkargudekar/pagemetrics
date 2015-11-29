@@ -3,7 +3,9 @@ setterm -term linux -back black -fore green -clear
 
 curl https://raw.githubusercontent.com/omkargudekar/pagemetrix-info/master/credit.txt | cat
 
+sleep 3
 echo "Installation started....\n"
+sleep 3
 
 read -p "Please select the port for node-server: " nodeport
 read -p "Please select the port for redi-server: " redisport
@@ -71,6 +73,17 @@ echo $$ > nodeserver_pid
 cd scripts
 nohup sh runagent.sh &
 echo $$ > pagemetrics_agent_pid
+
+
+dashboardURL="http://www.google.com"
+
+if curl --output /dev/null --silent --head --fail "$dashboardURL"
+then
+    echo "This URL Exist"
+else
+    echo "This URL Not Exist"
+fi
+
 
 echo "Bye Bye.. Installation complete...nJoy :) "
 
