@@ -45,7 +45,7 @@ fi
 
 
 
-wget https://github.com/omkargudekar/pagemetrix-info/pagemetrics-dashboard.tar.bz2
+wget https://github.com/omkargudekar/pagemetrix-info/blob/master/pagemetrics-dashboard.tar.bz2?raw=true
 tar -jxvf pagemetrix-dashboard.tar.bz2
 cd pagemetrix-dashboard
 npm install
@@ -54,12 +54,12 @@ npm install nodemon -g
 
 apt-get install redis-server
 nohup redis-server --port $redisport &
-echo $$ > agent_pid
+echo $$ > redit_agent_pid
 nohup nodemon --port $nodeport &
-echo $$ > agent_pid
+echo $$ > nodeserver_pid
 cd scripts
 sh runagent.sh
-echo $$ > agent_pid
+echo $$ > pagemetrics_agent_pid
 
 echo "Bye Bye.. Installation complete...nJoy :) "
 

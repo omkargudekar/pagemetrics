@@ -34,8 +34,8 @@
       <file leaf-file-name="installation_script.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/installation_script.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3821656">
-              <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="82" />
+            <state vertical-scroll-proportion="0.7165605">
+              <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -452,8 +452,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/installation_script.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3821656">
-          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="82" />
+        <state vertical-scroll-proportion="0.7165605">
+          <caret line="61" column="22" selection-start-line="61" selection-start-column="22" selection-end-line="61" selection-end-column="22" />
           <folding />
         </state>
       </provider>
