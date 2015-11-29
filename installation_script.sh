@@ -77,10 +77,12 @@ git clone https://github.com/omkargudekar/serverninja-unix-monitoring.git
 wait
 
 
+echo "Installing server-ninja setup..."
+
 cd serverninja-unix-monitoring
-npm install
+npm install --silent
 wait
-npm install nodemon -g
+npm install nodemon -g --silent
 wait
 
 
@@ -90,29 +92,22 @@ nohup sh runagent.sh &
 echo $$ > server-ninja_agent_pid
 
 
-echo "Checking redis server..."
+echo "Running redis server..."
 
 redisReply= `redis-cli PING`
 
 if [ $redisReply -ne "PONG" ];
 then
   echo "Redis server is down. Starting redis-server"
-  echo -n "Please select the port for redis-server: "
-  read -p redisport
-  wait
   nohup redis-server >redis.log &
   echo $$ > redit_agent_pid
 else
 
 
 
-echo "Starting node server..."
-
-
+echo "Starting -server-nija app.."
 nohup nodemon --port $nodeport > dashboard.log &
 echo $$ > nodeserver_pid
-
-
 
   echo "Redis-Server is already running..."
 fi
@@ -122,8 +117,6 @@ fi
 
 publicIP= `wget http://ipinfo.io/ip -qO -`
 dashboardURL=publicIP':'$nodeport
-
-
 
 if curl --output /dev/null --silent --head --fail "$dashboardURL"
 then
