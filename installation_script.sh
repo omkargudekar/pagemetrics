@@ -94,9 +94,9 @@ nohup redis-server >redis.log &
 
 
 echo "Installing server-ninja dashboard setup..."
-npm install &
+npm install --silent &
 wait
-npm install nodemon -g  &
+npm install nodemon -g --silent  &
 wait
 
 
