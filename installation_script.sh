@@ -2,7 +2,7 @@
 setterm -term linux -back black -fore green -clear
 $nodeport=52300
 
-curl https://raw.githubusercontent.com/omkargudekar/serverninja-unix-monitoring/master/credit.txt | cat
+curl https://raw.githubusercontent.com/omkargudekar/serverninja-unix-monitoring/master/credit.txt | cat &
 wait
 sleep 5
 echo "Installation started...."
@@ -15,47 +15,50 @@ wait
 if [ $(dpkg-query -W -f='${Status}' wget 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
   echo "No git found. Setting up git."
-  apt-get --force-yes --yes install git
+  apt-get --force-yes --yes install git &
+  wait
 else
   echo "git is already installed..."
 fi
-wait
+
 
 if [ $(dpkg-query -W -f='${Status}' wget 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
   echo "No wget found. Setting up wget."
-  apt-get --force-yes --yes install wget
+  apt-get --force-yes --yes install wget &
+  wait
 else
   echo "wget is already installed..."
 fi
-wait
 
 echo "Checking for nodejs installation..."
 
 if [ $(dpkg-query -W -f='${Status}' nodejs 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
   echo "No nodejs found. Setting up nodejs."
-  apt-get --force-yes --yes install nodejs
+  apt-get --force-yes --yes install nodejs &
+  wait
   else
   echo "nodejs is already installed..."
 fi
-wait
+
 echo "Checking for npm installation..."
 
 if [ $(dpkg-query -W -f='${Status}' nodejs npm 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
   echo "No npm found. Setting up npm."
-  apt-get --force-yes --yes install nodejs npm
+  apt-get --force-yes --yes install nodejs npm &
+  wait
   else
   echo "npm is already installed..."
 fi
-wait
 
 echo "Checking for redis-server installation..."
 if [ $(dpkg-query -W -f='${Status}' redis-server 2>/dev/null | grep -c "ok installed") -eq 0 ];
 then
   echo "No redis-server found. Setting up redis-server."
-  apt-get --force-yes --yes install redis-server
+  apt-get --force-yes --yes install redis-server &
+  wait
   else
   echo "redis-server is already installed..."
 fi
@@ -64,16 +67,16 @@ wait
 
 
 echo "Cleaning previous processes...if any..."
-pkill -f wrapper_dashboard_998899.sh
+pkill -f wrapper_dashboard_998899.sh &
 wait
 
 echo "Cleaning previous installations..if any..."
-rm -rf serverninja-unix-monitoring
+rm -rf serverninja-unix-monitoring &
 wait
 
 
 echo "Downloading code from repository..."
-git clone https://github.com/omkargudekar/serverninja-unix-monitoring.git
+git clone https://github.com/omkargudekar/serverninja-unix-monitoring.git &
 wait
 
 
@@ -88,7 +91,7 @@ echo $$ > server-ninja_agent_pid
 
 echo "Running redis server..."
 redisReply= $( redis-cli PING )
-wait
+
 
 if [ "$redisReply" = "PONG" ];
 then
@@ -102,16 +105,17 @@ fi
 
 
 echo "Installing server-ninja dashboard setup..."
-npm install --silent
+npm install --silent &
 wait
-npm install nodemon -g --silent | nohup nodemon --port $nodeport > dashboard.log &
+npm install nodemon -g --silent &
 wait
 
 
-#
-#echo "Starting -server-ninja dashboard.."
-#nohup nodemon --port $nodeport > dashboard.log &
-#echo $$ > nodeserver_pid
+
+
+echo "Starting -server-ninja dashboard.."
+nohup nodemon --port $nodeport > dashboard.log &
+echo $$ > nodeserver_pid
 
 
 
