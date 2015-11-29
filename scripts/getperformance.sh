@@ -63,10 +63,7 @@ echo "{"
 	echo "\"memory\":"
 	echo $memory
 
-	echo ","
 
-	echo "\"memory_details\":"
-	echo $memory_details
 
 	echo ","
 

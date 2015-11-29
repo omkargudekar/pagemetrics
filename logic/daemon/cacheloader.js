@@ -17,7 +17,7 @@ module.exports = {
                 cacheDriver.updateCache(data);
             });
 
-        }, 10000)
+        }, 3000)
 
 
 
