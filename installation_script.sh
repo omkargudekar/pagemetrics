@@ -113,15 +113,16 @@ wait
 
 
 echo "Starting -server-ninja dashboard.."
-nohup nodemon 5200 > dashboard.log &
+nohup nodemon  > dashboard.log &
 echo $$ > nodeserver_pid
+echo "dashboard running...."
 
 
 
 
 
 publicIP= `wget http://ipinfo.io/ip -qO -`
-dashboardURL=publicIP':5200'
+dashboardURL=$publicIP':5200'
 
 if curl --output /dev/null --silent --head --fail "$dashboardURL"
 then
