@@ -2,7 +2,7 @@
 setterm -term linux -back black -fore green -clear
 $nodeport=52300
 
-curl https://raw.githubusercontent.com/omkargudekar/pagemetrix-info/master/credit.txt | cat
+curl https://raw.githubusercontent.com/omkargudekar/serverninja-unix-monitoring/master/credit.txt | cat
 wait
 sleep 5
 echo "Installation started...."
@@ -73,7 +73,7 @@ wait
 
 
 echo "Downloading code from repository..."
-git clone https://github.com/omkargudekar/pagemetrics.git
+git clone https://github.com/omkargudekar/serverninja-unix-monitoring.git
 wait
 
 
