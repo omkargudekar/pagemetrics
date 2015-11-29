@@ -2,12 +2,11 @@
 setterm -term linux -back black -fore green -clear
 
 cat credit.txt
-echo "################################################################"
-echo "Installation"
-echo "################################################################"
+echo "Installation\n"
+echo "################################################################\n"
 
-read -p "Please select the port where you want to run the dashboard : " nodeport
-read -p "Please select the p: " redisport
+read -p "Please select the port for node-server: " nodeport
+read -p "Please select the port for redi-server: " redisport
 
 
 
