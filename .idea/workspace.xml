@@ -21,21 +21,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="installation_script.sh" pinned="false" current-in-tab="false">
+      <file leaf-file-name="installation_script.sh" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/installation_script.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-63.6">
-              <caret line="106" column="14" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.19900498">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="credit.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="credit.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/credit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.17038217">
-              <caret line="18" column="91" selection-start-line="18" selection-start-column="91" selection-end-line="18" selection-end-column="91" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -68,8 +68,8 @@
         <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/scripts/runagent.sh" />
-        <option value="$PROJECT_DIR$/installation_script.sh" />
         <option value="$PROJECT_DIR$/credit.txt" />
+        <option value="$PROJECT_DIR$/installation_script.sh" />
       </list>
     </option>
   </component>
@@ -500,18 +500,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/installation_script.sh">
+    <entry file="file://$PROJECT_DIR$/credit.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-63.6">
-          <caret line="106" column="14" selection-start-line="106" selection-start-column="14" selection-end-line="106" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/credit.txt">
+    <entry file="file://$PROJECT_DIR$/installation_script.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.17038217">
-          <caret line="18" column="91" selection-start-line="18" selection-start-column="91" selection-end-line="18" selection-end-column="91" />
+        <state vertical-scroll-proportion="0.19900498">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
           <folding />
         </state>
       </provider>

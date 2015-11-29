@@ -3,8 +3,8 @@ setterm -term linux -back black -fore green -clear
 
 curl https://raw.githubusercontent.com/omkargudekar/pagemetrix-info/master/credit.txt | cat
 wait
-sleep 3
-echo "Installation started....\n"
+sleep 5
+echo "Installation started...."
 wait
 sleep 3
 
