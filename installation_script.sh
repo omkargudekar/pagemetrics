@@ -123,7 +123,6 @@ else
     echo "Unable to access dashboard on " $dashboardURL "Please make sure port is open in your Cloud Hosting"
     setterm -reset
 fi
-wait
 
 
 echo "Bye Bye.. Installation complete...nJoy :) "
