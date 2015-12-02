@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for http://serverninja.info/</title>
+  <link>http://serverninja.info/</link>
+
+<item>
+     <link>http://serverninja.info/</link>
+     <title>Server Ninja : Performance Monitoring Dashboard</title>
+     <description>Server Ninja : Performance Monitoring Dashboard</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>http://serverninja.info/dashboard.html</link>
+     <title>Server Mon</title>
+     <description>Server Mon</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
