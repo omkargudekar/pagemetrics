@@ -234,7 +234,11 @@ footer {
 
 //Mobile And Tablets
 @media only screen and (max-width: 992px) {
-
+.tab-container {
+  .tab-button-wrapper{
+    margin-left: 179px;
+  }
+}
 }
 
 //Stat Adjustment
