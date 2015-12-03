@@ -762,7 +762,6 @@ function spline(json) {
                     // set up the updating of the chart each second
                     var series = this.series[0];
                     setInterval(function () {
-                        console.log(splineY);
                         var x = (new Date()).getTime(), // current time
                             y = parseInt(splineY);
                         series.addPoint([x, y], true, true);
