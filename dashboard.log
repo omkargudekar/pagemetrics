@@ -14976,3 +14976,10 @@ Client disconnected: jfkcfP6iS78KkG6LAAAC
 [90mGET /img/ninja-icon.png [36m304 [90m0ms[0m
 [90mGET /css/base.css.map [36m304 [90m0ms[0m
 Client connected: HhgvxzFHdcKwsqdgAAAE
+Client disconnected: HhgvxzFHdcKwsqdgAAAE
+[90mGET / [36m304 [90m3ms[0m
+[90mGET /img/ninja-icon.png [36m304 [90m2ms[0m
+[90mGET /css/base.css [36m304 [90m5ms[0m
+[90mGET /external/js/jquery-2.1.4.min.js [36m304 [90m6ms[0m
+[90mGET /external/js/materialize.min.js [36m304 [90m7ms[0m
+[90mGET /installation_script.sh [32m200 [90m1ms - 1.48kb[0m
