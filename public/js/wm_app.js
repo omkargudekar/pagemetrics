@@ -2,13 +2,11 @@
  * Created by sagarbendale on 11/25/15.
  */
 
-var serverLocations= window.location.hostname + ':'+window.location.port
+var serverLocations = window.location.hostname + ':' + window.location.port
 
 var socket = io(serverLocations),
-
-//var socket = io('52.25.169.164:51245'),
-//var socket = io('sentinami.com:51245'),
     json, resizeId, callonce = true;
+splineY = 90;
 charts = {};
 $(document).ready(function () {
     getServerData();
@@ -61,8 +59,7 @@ function initialize(data) {
     trafficBars(data);
     ioBars(data);
     cpuCombo(data);
-
-
+    spline(data);
     drawApps(data);
     cpuInfo(data);
     diskspace(data);
@@ -139,7 +136,6 @@ function getIoBarsData(json) {
     drw.push(device);
     drw.push(reads);
     drw.push(writes);
-    console.log(drw[0]);
     return drw;
 
 }
@@ -151,8 +147,6 @@ function updateData(json) {
     //Netchart Update
     data = getNetChartData(json);
     charts['netStatChart'].series[0].setData(data);
-
-    console.log(json.cpu_free);
     charts['cpuChart'].series[0].setData([parseFloat(json.cpu_free)]);
 
 
@@ -178,11 +172,7 @@ function updateData(json) {
     charts['ioBars'].xAxis[0].setCategories(data[0]);
     charts['ioBars'].series[0].setData(data[1]);
     charts['ioBars'].series[1].setData(data[2]);
-
-
-    //cpuInfo(json);
-    //diskspace(json);
-
+    splineY = json.cpu_free;
 
 }
 function netStatChart(json) {
@@ -701,7 +691,6 @@ function diskspace(json) {
     var data = new google.visualization.DataTable();
     var diskspace = json.diskspace,
         data1 = [];
-    //console.log(diskspace);
     for (i = 0; i < diskspace.length; i++) {
         var temp = [];
         var file_system = diskspace[i].file_system,
@@ -755,14 +744,88 @@ function drawApps(json) {
 
     table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
 }
+function spline(json) {
+    Highcharts.setOptions({
+        global: {
+            useUTC: false
+        }
+    });
+
+    $('#cpuSpline').highcharts({
+        chart: {
+            type: 'spline',
+            animation: Highcharts.svg, // don't animate in old IE
+            marginRight: 10,
+            events: {
+                load: function () {
+
+                    // set up the updating of the chart each second
+                    var series = this.series[0];
+                    setInterval(function () {
+                        console.log(splineY);
+                        var x = (new Date()).getTime(), // current time
+                            y = parseInt(splineY);
+                        series.addPoint([x, y], true, true);
+                    }, 1000);
+                }
+            }
+        },
+        title: {
+            text: ''
+        },
+        xAxis: {
+            type: 'datetime',
+            tickPixelInterval: 150
+        },
+        yAxis: {
+            title: {
+                text: '%'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            formatter: function () {
+                return '<b>' + this.series.name + '</b><br/>' +
+                    Highcharts.dateFormat('%Y-%m-%d %H:%M:%S', this.x) + '<br/>' +
+                    Highcharts.numberFormat(this.y, 2);
+            }
+        },
+        legend: {
+            enabled: false
+        },
+        exporting: {
+            enabled: false
+        },
+        series: [{
+            name: 'Cpu Usage %',
+            data: (function () {
+                // generate an array of random data
+                var data = [],
+                    time = (new Date()).getTime(),
+                    i;
+
+                for (i = -19; i <= 0; i += 1) {
+                    data.push({
+                        x: time + i * 1000,
+                        y: 100
+
+                    });
+                }
+                return data;
+            }())
+        }]
+    });
+}
 
 function getServerData() {
     socket.emit('getPerformanceDetails', '');
     socket.on('performanceDetails', function (data) {
-        //console.log(data);
         data = JSON.parse(data);
         if (callonce) {
-            console.log('initialize');
             callonce = false
             initialize(data);
         }
