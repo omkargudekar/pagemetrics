@@ -1,0 +1,3 @@
+[10985] 29 Nov 10:59:32.825 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+[10985] 29 Nov 10:59:32.825 * Max number of open files set to 10032
+[10985] 29 Nov 10:59:32.825 # Creating Server TCP listening socket *:6379: bind: Address already in use

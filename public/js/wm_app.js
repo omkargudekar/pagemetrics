@@ -623,7 +623,7 @@ function ioBars(json) {
             }
         }, {
             title: {
-                text: 'Profit (millions)'
+                text: ''
             },
             opposite: true
         }],
